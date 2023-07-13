@@ -18,7 +18,7 @@ export const fetchCityOptions = createAsyncThunk(
       `https://wft-geo-db.p.rapidapi.com/v1/geo/cities?namePrefix=${inputValue}`,
       {
         headers: {
-          'X-RapidAPI-Key': '60fb3940dbmshe428262047ff84bp109326jsn97c6aa48976c',
+          'X-RapidAPI-Key': 'key',
           'X-RapidAPI-Host': 'wft-geo-db.p.rapidapi.com',
         },
       }

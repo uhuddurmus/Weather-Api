@@ -17,7 +17,7 @@ export const fetchWeatherData = createAsyncThunk(
       console.log("coordinates",coordinates)
       const [lat, lon] = coordinates.split(" ");
       const response = await axios.get(
-        `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=cfe87a3b6b78b155324fa05cf6fccb05&units=metric&lang=tr`
+        `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=key&units=metric&lang=tr`
       );
   
       return response.data;
@@ -29,7 +29,7 @@ export const fetchWeatherData = createAsyncThunk(
     async (coordinates: string) => {
       const [lat, lon] = coordinates.split(" ");
       const response = await axios.get(
-        `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=cfe87a3b6b78b155324fa05cf6fccb05&units=metric&lang=tr`
+        `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=key&units=metric&lang=tr`
       );
   
       return response.data;
